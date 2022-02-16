@@ -13,7 +13,7 @@ protocol Buider {
     
     static func createMainModule() -> UIViewController
     static func createCommentModule() -> UIViewController
-}
+    static func createDetailModule(comment: Post) -> UIViewController}
 
 //an object there are asemled needed modules
 
@@ -32,6 +32,14 @@ class AsemblyBuilder: Buider {
         let view = CommentViewController()
         let network = NetworkService()
         let presenter = CommentPresenter(view: view, network: network)
+        view.presenter = presenter
+        return view
+    }
+    
+    static func createDetailModule(comment: Post) -> UIViewController {
+        let view = DetailViewController()
+        let comment = comment
+        let presenter = DetailPresenter(view: view, comment: comment)
         view.presenter = presenter
         return view
     }

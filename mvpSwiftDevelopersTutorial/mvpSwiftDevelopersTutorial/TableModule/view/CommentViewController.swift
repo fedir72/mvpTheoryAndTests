@@ -21,9 +21,13 @@ class CommentViewController: UIViewController {
 }
 
 //MARK: - UITableViewDelegate
+
 extension CommentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myTableView.deselectRow(at: indexPath, animated: true)
+        let comment = presenter.comments?[indexPath.row]
+        let detailVC = AsemblyBuilder.createDetailModule(comment: comment!)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
