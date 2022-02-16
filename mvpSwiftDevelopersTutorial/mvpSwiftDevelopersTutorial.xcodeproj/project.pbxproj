@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		BD9AA89E27BD091700AABE79 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9AA89D27BD091700AABE79 /* MainView.xib */; };
 		BD9AA8A127BD0A8500AABE79 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA8A027BD0A8500AABE79 /* AssemblyBuilder.swift */; };
+		BD9AA8A827BD147600AABE79 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA8A627BD147600AABE79 /* CommentViewController.swift */; };
+		BD9AA8A927BD147600AABE79 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD9AA8A727BD147600AABE79 /* CommentViewController.xib */; };
+		BD9AA8AB27BD18E500AABE79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA8AA27BD18E500AABE79 /* Post.swift */; };
+		BD9AA8AE27BD1A6600AABE79 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA8AD27BD1A6600AABE79 /* NetworkService.swift */; };
+		BD9AA8B027BD1FC500AABE79 /* CommentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA8AF27BD1FC500AABE79 /* CommentPresenter.swift */; };
 		BDDF38F727BC37C500C4648A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF38F627BC37C500C4648A /* AppDelegate.swift */; };
 		BDDF38F927BC37C500C4648A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF38F827BC37C500C4648A /* SceneDelegate.swift */; };
 		BDDF38FB27BC37C500C4648A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF38FA27BC37C500C4648A /* MainViewController.swift */; };
@@ -21,6 +26,11 @@
 /* Begin PBXFileReference section */
 		BD9AA89D27BD091700AABE79 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		BD9AA8A027BD0A8500AABE79 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		BD9AA8A627BD147600AABE79 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		BD9AA8A727BD147600AABE79 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		BD9AA8AA27BD18E500AABE79 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BD9AA8AD27BD1A6600AABE79 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BD9AA8AF27BD1FC500AABE79 /* CommentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresenter.swift; sourceTree = "<group>"; };
 		BDDF38F327BC37C500C4648A /* mvpSwiftDevelopersTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvpSwiftDevelopersTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDF38F627BC37C500C4648A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDF38F827BC37C500C4648A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +96,49 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		BD9AA8A227BD140200AABE79 /* TableModule */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA8A527BD144B00AABE79 /* presenter */,
+				BD9AA8A427BD143000AABE79 /* model */,
+				BD9AA8A327BD142800AABE79 /* view */,
+			);
+			path = TableModule;
+			sourceTree = "<group>";
+		};
+		BD9AA8A327BD142800AABE79 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA8A627BD147600AABE79 /* CommentViewController.swift */,
+				BD9AA8A727BD147600AABE79 /* CommentViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BD9AA8A427BD143000AABE79 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA8AA27BD18E500AABE79 /* Post.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BD9AA8A527BD144B00AABE79 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA8AF27BD1FC500AABE79 /* CommentPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		BD9AA8AC27BD1A3D00AABE79 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA8AD27BD1A6600AABE79 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
 		BDDF38EA27BC37C500C4648A = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +160,10 @@
 			children = (
 				BDDF38F627BC37C500C4648A /* AppDelegate.swift */,
 				BDDF38F827BC37C500C4648A /* SceneDelegate.swift */,
+				BD9AA8AC27BD1A3D00AABE79 /* ServiceLayer */,
 				BD9AA89F27BD0A5F00AABE79 /* Builder */,
 				BD9AA89727BD07DC00AABE79 /* MainModule */,
+				BD9AA8A227BD140200AABE79 /* TableModule */,
 				BDDF38FF27BC37C700C4648A /* Assets.xcassets */,
 				BDDF390127BC37C700C4648A /* LaunchScreen.storyboard */,
 				BDDF390427BC37C700C4648A /* Info.plist */,
@@ -174,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9AA8A927BD147600AABE79 /* CommentViewController.xib in Resources */,
 				BD9AA89E27BD091700AABE79 /* MainView.xib in Resources */,
 				BDDF390327BC37C700C4648A /* LaunchScreen.storyboard in Resources */,
 				BDDF390027BC37C700C4648A /* Assets.xcassets in Resources */,
@@ -187,11 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9AA8A827BD147600AABE79 /* CommentViewController.swift in Sources */,
 				BDDF390D27BC3CF800C4648A /* MainPresenter.swift in Sources */,
 				BDDF38FB27BC37C500C4648A /* MainViewController.swift in Sources */,
+				BD9AA8AB27BD18E500AABE79 /* Post.swift in Sources */,
+				BD9AA8AE27BD1A6600AABE79 /* NetworkService.swift in Sources */,
 				BDDF38F727BC37C500C4648A /* AppDelegate.swift in Sources */,
 				BD9AA8A127BD0A8500AABE79 /* AssemblyBuilder.swift in Sources */,
 				BDDF390B27BC3CA700C4648A /* Person.swift in Sources */,
+				BD9AA8B027BD1FC500AABE79 /* CommentPresenter.swift in Sources */,
 				BDDF38F927BC37C500C4648A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

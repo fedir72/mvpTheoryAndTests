@@ -12,6 +12,7 @@ import UIKit
 protocol Buider {
     
     static func createMainModule() -> UIViewController
+    static func createCommentModule() -> UIViewController
 }
 
 //an object there are asemled needed modules
@@ -25,5 +26,13 @@ class AsemblyBuilder: Buider {
      let presenter = MainPresenter(view: view, person: person)
        view.presenter = presenter
        return view
+    }
+    
+    static func createCommentModule() -> UIViewController {
+        let view = CommentViewController()
+        let network = NetworkService()
+        let presenter = CommentPresenter(view: view, network: network)
+        view.presenter = presenter
+        return view
     }
 }

@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let vc = AsemblyBuilder.createMainModule()
+        let vc = AsemblyBuilder.createCommentModule()
         vc.title = "main module"
         let navVC = UINavigationController(rootViewController: vc)
         
